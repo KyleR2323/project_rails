@@ -1,2 +1,13 @@
-<h1>Dogs#index</h1>
-<p>Find me in app/views/dogs/index.html.erb</p>
+<% @dogs.each do |dog| %>
+  <h3><%= link_to dog.name, dog %></h3>
+  <p>sound: <%= dog.sound %></p>
+  <p>meme_phrase: <%= dog.meme_phrase %></p>
+  <p>provisional: <%= dog.provisional %></p>
+  <p><%= dog.url %></p>
+  <p><%= dog.image %></p>
+  <p>more info: <%= dog.pdf %></p>
+  <p>age: <%= dog.age %></p>
+  <p>size: <%= dog.size %></p>
+  <p>coat_length: <%= dog.coat_length %></p>
+  <hr>
+<% end %>
