@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  sound: MyString
+  meme_phrase: MyText
+  provisional: MyString
+  url: MyString
+  image: MyString
+  pdf: MyString
+  age: 1
+  size: MyString
+  coat_length: MyString
+
+two:
+  name: MyString
+  sound: MyString
+  meme_phrase: MyText
+  provisional: MyString
+  url: MyString
+  image: MyString
+  pdf: MyString
+  age: 1
+  size: MyString
+  coat_length: MyString
