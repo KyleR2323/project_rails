@@ -8,9 +8,31 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
-  </head>
 
+    <nav class="level">
+      <p class="level-item has-text-centered">
+        <%= link_to 'Home', root_path, class: 'link is-info' %>
+      </p>
+      <p class="level-item has-text-centered">
+        <%= link_to 'Menu', class: 'link is-info' %>
+      </p>
+      <p class="level-item has-text-centered">
+        <%= image_tag('https://bulma.io/images/bulma-type.png', alt: 'Dog Breed Logo', style: 'height: 30px;') %>
+      </p>
+      <p class="level-item has-text-centered">
+        <%= link_to 'Reservations', class: 'link is-info' %>
+      </p>
+      <p class="level-item has-text-centered">
+        <%= link_to 'Contact', class: 'link is-info' %>
+      </p>
+    </nav>
+
+  </head>
   <body>
-    <%= yield %>
+    <section class="section">
+      <div class="container">
+      </div>
+      <%= yield %>
+    </section>
   </body>
 </html>

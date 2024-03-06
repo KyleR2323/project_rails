@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'home/index'
   resources :dogs, only: [:index, :show]
   root 'dogs#index'
   #get 'dogs/index'

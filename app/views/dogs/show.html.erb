@@ -1,10 +1,3 @@
-<h3><%= @dog.name %></h3>
-<p>sound: <%= @dog.sound %></p>
-<p>meme_phrase <%= @dog.meme_phrase %></p>
-<p>provisional: <%= @dog.provisional %></p>
-<p><%= @dog.url %></p>
-<p><%= @dog.image %></p>
-<p>more info: <%= @dog.pdf %></p>
-<p>age: <%= @dog.age %></p>
-<p>size: <%= @dog.size %></p>
-<p>coat_length: <%= @dog.coat_length %></p>
+<% content_for(:html_title) {@dog.name}%>
+<%= render @dog %>
+
