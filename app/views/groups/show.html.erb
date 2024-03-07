@@ -1,2 +1,16 @@
-<h1>Group#show</h1>
-<p>Find me in app/views/group/show.html.erb</p>
+<% content_for(:html_title) {@group.name}%>
+<br>
+<h4 class="subtitle is-4">Dog breeds by <%= @group.name%> group:</h4>
+
+<div class="columns is-multiline">
+  <% @group.dogs.each do |gd| %>
+    <div class="column is-one-quarter">
+      <div>
+        <%= image_tag(gd.image, alt: "#{gd.name} Image", size: '300x200') %>
+      </div>
+      <div>
+        <%= link_to "#{gd.name} - (#{gd.section.name})", gd %>
+      </div>
+    </div>
+  <% end %>
+</div>

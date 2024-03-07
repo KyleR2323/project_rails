@@ -1,2 +1,16 @@
-<h1>Country#show</h1>
-<p>Find me in app/views/country/show.html.erb</p>
+<% content_for(:html_title) {@country.name}%>
+<br>
+<h4 class="subtitle is-4">Dogs in <%= @country.name%>:</h4>
+
+<div class="columns is-multiline">
+  <% @country.dogs.each do |cd| %>
+    <div class="column is-one-quarter">
+      <div>
+        <%= image_tag(cd.image, alt: "#{cd.name} Image", size: '300x200') %>
+      </div>
+      <div>
+        <%= link_to "#{cd.name} - (#{cd.section.name})", cd %>
+      </div>
+    </div>
+  <% end %>
+</div>

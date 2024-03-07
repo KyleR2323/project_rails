@@ -15,4 +15,22 @@
       <strong><%= link_to "See all the dog breeds.", dogs_path %></strong>
     </p>
   </div>
+  <div class="column">
+    <h2 class="title is-2">Groups</h2>
+    <ol>
+      <% @groups.each do |group| %>
+      <li>
+        <%= link_to group.name, group %>
+      </li>
+      <% end %>
+    </ol>
+    <p>
+      <strong><%= link_to "See all the group dogs.", groups_path %></strong>
+    </p>
+  </div>
+  <div>
+    <%= image_tag(@random_dog.image, alt: 'Random Dog Image', size: '500x400') if @random_dog.present? %>
+  </div>
+
+  <%= button_to 'Next Dog', root_path, method: :get, remote: true %>
 </div>

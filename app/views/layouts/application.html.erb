@@ -8,27 +8,9 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
-
-    <nav class="level">
-      <p class="level-item has-text-centered">
-        <%= link_to 'Home', root_path, class: 'link is-info' %>
-      </p>
-      <p class="level-item has-text-centered">
-        <%= link_to 'Group',  groups_path, class: 'link is-info' %>
-      </p>
-      <p class="level-item has-text-centered">
-        <%= link_to 'About Me', about_path, class: 'link is-info' %>
-      </p>
-      <p class="level-item has-text-centered">
-        <%= link_to 'Section',  sections_path, class: 'link is-info' %>
-      </p>
-      <p class="level-item has-text-centered">
-        <%= link_to 'Country',  countries_path, class: 'link is-info' %>
-      </p>
-    </nav>
-
   </head>
   <body>
+    <%= render "layouts/menu" %>
     <section class="section">
       <div class="container">
       </div>

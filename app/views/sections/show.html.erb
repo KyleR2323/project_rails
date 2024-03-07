@@ -1,2 +1,16 @@
-<h1>Section#show</h1>
-<p>Find me in app/views/section/show.html.erb</p>
+<% content_for(:html_title) {@section.name}%>
+<br>
+<h4 class="subtitle is-4">Dog breeds by <%= @section.name%>:</h4>
+
+<div class="columns is-multiline">
+  <% @section.dogs.each do |sd| %>
+    <div class="column is-one-quarter">
+      <div>
+        <%= image_tag(sd.image, alt: "#{sd.name} Image", size: '300x200') %>
+      </div>
+      <div>
+        <%= link_to "#{sd.name} - (#{sd.group.name})", sd %>
+      </div>
+    </div>
+  <% end %>
+</div>
