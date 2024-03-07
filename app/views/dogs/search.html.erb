@@ -5,6 +5,9 @@
   <% @dogs.each do |dog| %>
   <div class="column is-one-quarter">
     <div>
+      <%= image_tag(dog.image, alt: "#{dog.name} Image", size: '300x200') %>
+    </div>
+    <div>
       <%= link_to "#{dog.name}", dog %>
     </div>
   </div>

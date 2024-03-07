@@ -1,0 +1,12 @@
+<p class="mb-5">
+  Found <%= pluralize(@countries.count, 'country') %> when searching for: <%= params[:keywords] %>
+</p>
+<div class="columns is multiline">
+  <% @countries.each do |country| %>
+  <div class="column is-one-quarter">
+    <div>
+      <%= link_to "#{country.name}", country %>
+    </div>
+  </div>
+  <% end %>
+</div>
