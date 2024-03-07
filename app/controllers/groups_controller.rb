@@ -6,4 +6,9 @@ class GroupsController < ApplicationController
   def show
     @group = Group.find(params[:id])
   end
+
+  def search
+    wildcard_search = "%#{params[:keywords]}%"
+    @groups = Group.where("name LIKE ?", wildcard_search)
+  end
 end

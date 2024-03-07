@@ -12,9 +12,21 @@ Rails.application.routes.draw do
       get "search"
     end
   end
-  resources :sections, only: [:index, :show]
-  resources :groups, only: [:index, :show]
-  resources :countries, only: [:index, :show]
+  resources :sections, only: [:index, :show] do
+    collection do
+      get "search"
+    end
+  end
+  resources :groups, only: [:index, :show] do
+    collection do
+      get "search"
+    end
+  end
+  resources :countries, only: [:index, :show] do
+    collection do
+      get "search"
+    end
+  end
   root 'home#index'
   get 'about', to: 'about#index'
 
