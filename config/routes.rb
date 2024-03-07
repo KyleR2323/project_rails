@@ -7,12 +7,18 @@ Rails.application.routes.draw do
   #get 'country/index'
   #get 'country/show'
   #get 'home/index'
-  resources :dogs, only: [:index, :show]
+  resources :dogs, only: [:index, :show] do
+    collection do
+      get "search"
+    end
+  end
   resources :sections, only: [:index, :show]
   resources :groups, only: [:index, :show]
   resources :countries, only: [:index, :show]
   root 'home#index'
   get 'about', to: 'about#index'
+
+
 
   #get 'dogs/index'
   #get 'dogs/show'

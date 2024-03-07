@@ -43,3 +43,8 @@ dogs.each do |dog|
     coat_length: Faker::Creature::Dog.coat_length
   )
 end
+
+puts "Created #{Group.count} groups"
+puts "Created #{Section.count} sections"
+puts "Created #{Country.count} countries"
+puts "Created #{Dog.count} dogs"
