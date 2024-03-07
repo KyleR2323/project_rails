@@ -1,0 +1,12 @@
+<p class="mb-5">
+  Found <%= pluralize(@groups.count, 'group') %> when searching for: <%= params[:keywords] %>
+</p>
+<div class="columns is multiline">
+  <% @groups.each do |group| %>
+  <div class="column is-one-quarter">
+    <div>
+      <%= link_to "#{group.name}", group %>
+    </div>
+  </div>
+  <% end %>
+</div>
