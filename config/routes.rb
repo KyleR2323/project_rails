@@ -1,7 +1,19 @@
 Rails.application.routes.draw do
-  get 'home/index'
+  #get 'about/index'
+  #get 'section/index'
+  #get 'section/show'
+  #get 'group/index'
+  #get 'group/show'
+  #get 'country/index'
+  #get 'country/show'
+  #get 'home/index'
   resources :dogs, only: [:index, :show]
-  root 'dogs#index'
+  resources :sections, only: [:index, :show]
+  resources :groups, only: [:index, :show]
+  resources :countries, only: [:index, :show]
+  root 'home#index'
+  get 'about', to: 'about#index'
+
   #get 'dogs/index'
   #get 'dogs/show'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

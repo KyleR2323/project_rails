@@ -1,2 +1,18 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="columns">
+  <div class="column">
+    <h2 class="title is-2">Dog Breeds</h2>
+    <ol>
+      <% @dogs.each do |dog| %>
+      <li>
+        <%= link_to dog.name, dog %>
+        <em>
+          (<%= "#{dog.name}"%>)
+        </em>
+      </li>
+      <% end %>
+    </ol>
+    <p>
+      <strong><%= link_to "See all the dog breeds.", dogs_path %></strong>
+    </p>
+  </div>
+</div>
