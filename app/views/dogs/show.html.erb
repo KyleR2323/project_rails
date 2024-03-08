@@ -1,7 +1,7 @@
 <div class="columns is-centered">
   <%= image_tag(@dog.image, alt: "#{@dog.name} Image", size: '300x200') %>
   <div class="content">
-    <strong><%= @dog.name %></strong> <small>Group: <%= @dog.group.name %></small> <small>age: <%= @dog.age %></small>
+    <strong><%= @dog.name %></strong> <small>Group: <%= link_to @dog.group.name, @dog.group %></small> <small>age: <%= @dog.age %></small>
     <br>
     <p>Country: <%= link_to @dog.country.name, @dog.country %></p>
     <p>Section: <%= link_to @dog.section.name, @dog.section %></p>

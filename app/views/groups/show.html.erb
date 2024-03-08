@@ -1,7 +1,6 @@
 <% content_for(:html_title) {@group.name}%>
 <br>
 <h4 class="subtitle is-4">Dog breeds by <%= @group.name%> group:</h4>
-
 <div class="columns is-multiline">
   <% @group.dogs.each do |gd| %>
     <div class="column is-one-quarter">
