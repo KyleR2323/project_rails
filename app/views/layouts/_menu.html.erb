@@ -1,24 +1,12 @@
-<nav class="navbar">
-  <div class="navbar-menu">
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
     <div class="navbar-start">
-      <p class="level-item has-text-centered">
-        <%= link_to 'Home', root_path, class: 'link is-info' %>
-      </p>
-      <p class="level-item has-text-centered">
-        <%= link_to 'Group',  groups_path, class: 'link is-info' %>
-      </p>
-      <p class="level-item has-text-centered">
-        <%= link_to 'About Me', about_path, class: 'link is-info' %>
-      </p>
-      <p class="level-item has-text-centered">
-        <%= link_to 'Section',  sections_path, class: 'link is-info' %>
-      </p>
-      <p class="level-item has-text-centered">
-        <%= link_to 'Country',  countries_path, class: 'link is-info' %>
-      </p>
-      <p class="level-item has-text-centered">
-        <%= link_to 'Dogs',  dogs_path, class: 'link is-info' %>
-      </p>
+      <a class="navbar-item" href="<%= root_path %>">Home</a>
+      <a class="navbar-item" href="<%= groups_path %>">Group</a>
+      <a class="navbar-item" href="<%= about_path %>">About Me</a>
+      <a class="navbar-item" href="<%= sections_path %>">Sections</a>
+      <a class="navbar-item" href="<%= countries_path %>">Countries</a>
+      <a class="navbar-item" href="<%= dogs_path %>">Dogs</a>
     </div>
   </div>
 </nav>

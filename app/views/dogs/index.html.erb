@@ -1,10 +1,14 @@
-<%= will_paginate @dogs %>
-<% @dogs.each do |dog| %>
-  <h3><%= link_to dog.name, dog %></h3>
-  <%= image_tag(dog.image, alt: "#{dog.name} Image", size: '300x200') %>
-  <p>Country: <%= dog.country.name %></p>
-  <p>Group: <%= dog.group.name %></p>
-  <p>Section: <%= dog.section.name %></p>
-<% end %>
-<%= will_paginate @dogs %>
+<div class="columns is-multiline">
+  <div class="column is-one-quarter">
+    <%= will_paginate @dogs %>
+    <% @dogs.each do |dog| %>
+      <h3><%= link_to dog.name, dog %></h3>
+      <%= image_tag(dog.image, alt: "#{dog.name} Image", size: '300x200') %>
+      <p>Country: <%= dog.country.name %></p>
+      <p>Group: <%= dog.group.name %></p>
+      <p>Section: <%= dog.section.name %></p>
+    <% end %>
+    <%= will_paginate @dogs %>
+  </div>
+</div>
 
